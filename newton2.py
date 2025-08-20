@@ -23,10 +23,10 @@ def newtons_method(f, x0, eps=1e-6, max_iter=100, tol=1e-5):
     """
 
     def derivative(func, x, h=1e-5):
-        return (func(x + h) - func(x - h)) / (2 * h)
+        return (func(x + h) - func(x)) / (h) #using definition instead of central difference
 
     def second_derivative(func, x, h=1e-5):
-        return (derivative(func, x + h, h) - derivative(func, x - h, h)) / (2 * h)
+        return (derivative(func, x + h, h) - derivative(func, x)) / (2 * h) #using definition instead of central difference
 
     x = x0
     for i in range(max_iter):
