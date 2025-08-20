@@ -45,13 +45,3 @@ def newtons_method(f, x0, eps=1e-6, max_iter=100, tol=1e-5):
         x = x_new
 
     return x, f(x), max_iter
-
-
-# %%
-f = lambda x: x**2 + 2 * x + 1
-x0 = 5.0
-
-result = newtons_method(f, x0)
-print("Estimated critical point:", result[0])
-print("Function value at critical point:", result[1])
-print("Iterations:", result[2])
