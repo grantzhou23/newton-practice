@@ -13,9 +13,8 @@
 # ---
 
 # %%
-def f(x): 
-    return x^3-3*x^2+4*x
-
+def f(x):
+    return x ^ 3 - 3 * x ^ 2 + 4 * x
 
 
 # %%
@@ -23,25 +22,26 @@ x0 = 10
 
 # %%
 result = f(x0)
-print (result)
+print(result)
 
 
 # %%
 def first_derivative(x):
-    return 3*x^2-6*x+4
+    return 3 * x ^ 2 - 6 * x + 4
+
 
 def second_derivative(x):
-    return 6*x-6
+    return 6 * x - 6
 
 
 # %%
-x1 = x0 - first_derivative(x0)/second_derivative(x0)
-print (x1)
+x1 = x0 - first_derivative(x0) / second_derivative(x0)
+print(x1)
 
 # %%
 i = 0
 while True:
-    print(i, end=' ')
+    print(i, end=" ")
     i = i + 1
 
 # %%

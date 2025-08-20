@@ -13,15 +13,16 @@
 # ---
 
 # %%
-def newtons_method(f, x0, eps=1e-6, max_iter=100, tol=1e-5):
-    """The optimization function using newton's method
+def newtons_method(f, x0, eps = 1e-6, max_iter = 100, tol = 1e-5):
+
+    """ The optimization function using newton's method 
     f: function to optimize
     x0: starting point
     eps: epsilon
     tol: tolerance
-
+    
     """
-
+ 
     def derivative(func, x, h=1e-5):
         return (func(x + h) - func(x - h)) / (2 * h)
 
@@ -48,7 +49,7 @@ def newtons_method(f, x0, eps=1e-6, max_iter=100, tol=1e-5):
 
 
 # %%
-f = lambda x: x**2 + 2 * x + 1
+f = lambda x: x**2 + 2*x + 1
 x0 = 5.0
 
 result = newtons_method(f, x0)
